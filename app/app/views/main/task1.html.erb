@@ -1,16 +1,18 @@
-<h1>Task 1 Page</h1>
-<p>This is the content for Task 1</p>
-<%= button_to 'Return to Index', root_path, method: :get, class: 'btn btn-primary' %>
-
-<!-- Form for URL validation -->
+<h1>Task 1 : XHTML syntax validation</h1>
+<!--<p>This is the content for Task 1</p>-->
 <h3>Validate XHTML for a URL</h3>
 <%= form_with url: task1_path, method: :get, local: true do %>
   <%= label_tag :url, "Enter URL" %>
   <%= text_field_tag :url, '', size: 50 %>
   <%= submit_tag 'Validate', class: 'btn btn-primary' %>
 <% end %>
+</br>
+<%= button_to 'Return to Index', root_path, method: :get, class: 'btn btn-primary' %>
+
 
 <% if @validation_result.present? %>
   <h4>Validation Result:</h4>
   <p><%= @validation_result %></p>
 <% end %>
+
+

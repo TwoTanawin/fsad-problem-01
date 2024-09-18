@@ -1,4 +1,4 @@
-<h1>Task 2 Page</h1>
+<h1>Task 2 : Divide-by-Zero Exception</h1>
 <p>Enter numbers to divide:</p>
 
 <%= form_with url: task2_path, method: :get, local: true do %>
@@ -24,3 +24,5 @@
 <% elsif @error_message.present? %>
   <p><strong>Error:</strong> <%= @error_message %></p>
 <% end %>
+
+

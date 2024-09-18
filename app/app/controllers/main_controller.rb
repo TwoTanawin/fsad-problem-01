@@ -31,14 +31,12 @@ class MainController < ApplicationController
   end
 
   def task3
-    # Default URLs and search texts for NYT and Bangkok Post
     nyt_url = 'https://www.nytimes.com/section/world'
     nyt_text = '/world/'
 
     bp_url = 'https://www.bangkokpost.com'
     bp_text = 'bangkokpost.com'
 
-    # Fetch headlines from NYT and Bangkok Post
     nyt_fetcher = FetchParseHtml.new(nyt_url, nyt_text)
     @nyt_headlines = nyt_fetcher.fetch
 
@@ -48,3 +46,6 @@ class MainController < ApplicationController
     render 'task3'
   end
 end
+
+
+

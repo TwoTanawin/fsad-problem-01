@@ -1,4 +1,3 @@
-# lib/xhtml_validator.rb
 require 'open-uri'
 require 'nokogiri'
 
@@ -24,3 +23,7 @@ class XhtmlValidator
     end
   end
 end
+
+
+
+

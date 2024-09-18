@@ -17,3 +17,4 @@ Rails.application.routes.draw do
   match "task2", to: "main#task2", via: [:get, :post]
   get "task3", to: "main#task3"
 end
+
