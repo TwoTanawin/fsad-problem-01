@@ -1,0 +1,30 @@
+<h1>Task 3 Page</h1>
+<p>This is the content for Task 3</p>
+
+<h2>New York Times Headlines</h2>
+<% if @nyt_headlines.present? %>
+  <ul>
+    <% @nyt_headlines.each do |link| %>
+      <li>
+        <a href="<%= link[:url] %>"><%= link[:title] %></a>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No New York Times headlines found. Please provide a valid URL and search text.</p>
+<% end %>
+
+<h2>Bangkok Post Headlines</h2>
+<% if @bp_headlines.present? %>
+  <ul>
+    <% @bp_headlines.each do |link| %>
+      <li>
+        <a href="<%= link[:url] %>"><%= link[:title] %></a>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No Bangkok Post headlines found. Please provide a valid URL and search text.</p>
+<% end %>
+
+<%= button_to 'Return to Index', root_path, method: :get, class: 'btn btn-primary' %>

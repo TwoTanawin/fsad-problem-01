@@ -1,0 +1,24 @@
+<h1>Task 2 Page</h1>
+<p>Enter numbers to divide:</p>
+
+<%= form_with url: task2_path, method: :get, local: true do %>
+  <div class="form-group">
+    <label for="num1">Number 1:</label>
+    <%= number_field_tag :num1, params[:num1], class: 'form-control', step: 'any', required: true %>
+  </div>
+
+  <div class="form-group">
+    <label for="num2">Number 2:</label>
+    <%= number_field_tag :num2, params[:num2], class: 'form-control', step: 'any', required: true %>
+  </div>
+
+  <%= submit_tag 'Divide', class: 'btn btn-primary' %>
+<% end %>
+
+<%= button_to 'Return to Index', root_path, method: :get, class: 'btn btn-secondary' %>
+
+<% if @result.present? %>
+  <p><strong>Result:</strong> <%= @result %></p>
+<% elsif @error_message.present? %>
+  <p><strong>Error:</strong> <%= @error_message %></p>
+<% end %>
