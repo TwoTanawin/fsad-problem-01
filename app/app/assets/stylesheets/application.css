@@ -1,15 +1,97 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+/* Apply Arial font */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
+}
+
+.navbar {
+    background-color: #6256CA;
+    color: #FDFAD9;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-link {
+    color: #FDFAD9;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 3px;
+    margin-left: 10px;
+    background-color: #86D293;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: Arial, sans-serif;
+}
+
+.nav-link:hover {
+    background-color: #5a8d3f;
+    color: #fff;
+}
+
+.nav-link {
+    position: relative;
+    display: inline-block;
+}
+
+
+.nav-link::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 125%; /* Position above the link */
+    left: 50%;
+    margin-left: -60px; /* Center the tooltip */
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    width: 120px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+    font-size: 0.75rem;
+}
+
+.nav-link:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media (max-width: 600px) {
+    .navbar .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .nav-link {
+        margin: 5px 0;
+    }
+}

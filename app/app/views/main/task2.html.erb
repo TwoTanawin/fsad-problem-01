@@ -6,14 +6,16 @@
     <label for="num1">Number 1:</label>
     <%= number_field_tag :num1, params[:num1], class: 'form-control', step: 'any', required: true %>
   </div>
-
+  </br>
   <div class="form-group">
     <label for="num2">Number 2:</label>
     <%= number_field_tag :num2, params[:num2], class: 'form-control', step: 'any', required: true %>
   </div>
-
+  </br>
   <%= submit_tag 'Divide', class: 'btn btn-primary' %>
 <% end %>
+
+</br>
 
 <%= button_to 'Return to Index', root_path, method: :get, class: 'btn btn-secondary' %>
 

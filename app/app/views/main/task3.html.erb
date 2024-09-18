@@ -5,9 +5,7 @@
 <% if @nyt_headlines.present? %>
   <ul>
     <% @nyt_headlines.each do |link| %>
-      <li>
-        <a href="<%= link[:url] %>"><%= link[:title] %></a>
-      </li>
+      <li><a href="<%= link[:url] %>"><%= link[:title] %></a></li>
     <% end %>
   </ul>
 <% else %>
@@ -18,9 +16,7 @@
 <% if @bp_headlines.present? %>
   <ul>
     <% @bp_headlines.each do |link| %>
-      <li>
-        <a href="<%= link[:url] %>"><%= link[:title] %></a>
-      </li>
+      <li><a href="<%= link[:url] %>"><%= link[:title] %></a></li>
     <% end %>
   </ul>
 <% else %>
