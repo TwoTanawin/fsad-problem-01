@@ -22,7 +22,7 @@ Ensure Docker and Docker Compose are installed on your machine before proceeding
 1. **Clone the Repository:**
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/TwoTanawin/fsad-problem-01.git
    cd problem_01
    ```
 
